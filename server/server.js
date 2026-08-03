@@ -6,6 +6,7 @@ import connectDB from './config/db.js';
 import errorHandler from './middleware/errorHandler.js';
 import authRoutes from './routes/authRoutes.js';
 import productRoutes from './routes/productRoutes.js';
+import cartRoutes from './routes/cartRoutes.js';
 
 const app = express();
 
@@ -25,6 +26,7 @@ app.get('/api/health', (req, res) => res.status(200).json({ status: 'ok' }));
 
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
+app.use('/api/cart', cartRoutes);
 // Further routers (products, cart, orders, dashboard, suppliers, ai) plug in
 // here in the same pattern as we build them out.
 
