@@ -22,13 +22,16 @@ import OrderDetailPage from '../pages/OrderDetailPage';
 import SupplierDashboardPage from '../pages/SupplierDashboardPage';
 import SupplierProductsPage from '../pages/SupplierProductsPage';
 import SupplierProductFormPage from '../pages/SupplierProductFormPage';
+import SupplierIncomingOrdersPage from '../pages/SupplierIncomingOrdersPage';
+import BuyerOnboardingPage from '../pages/BuyerOnboardingPage';
+import SupplierOnboardingPage from '../pages/SupplierOnboardingPage';
 
 // Phase 2 replaced the Home and Marketplace placeholders with the real
 // pages; Phase 4 replaces Login/Register; Phase 5 replaced the buyer
 // shopping flow (Product Detail, Cart, Checkout, My Orders, Order Detail).
 // Phase 6 replaces the supplier Dashboard and My Products (CRUD).
-// Everything else still uses PagePlaceholder — onboarding, profile, and
-// Incoming Orders come in later phases.
+// Phase 7 replaces Incoming Orders. Onboarding and profile still use
+// PagePlaceholder.
 const AppRoutes = () => (
   <Routes>
     <Route element={<PublicLayout />}>
@@ -49,11 +52,8 @@ const AppRoutes = () => (
           backend-side for these (e.g. GET /orders/:id allows either the
           buyer or supplier owner). */}
       <Route element={<ProtectedRoute />}>
-        <Route path="/onboarding/buyer" element={<PagePlaceholder name="Buyer Onboarding" />} />
-        <Route
-          path="/onboarding/supplier"
-          element={<PagePlaceholder name="Supplier Onboarding" />}
-        />
+        <Route path="/onboarding/buyer" element={<BuyerOnboardingPage />} />
+        <Route path="/onboarding/supplier" element={<SupplierOnboardingPage />} />
         <Route path="/profile" element={<PagePlaceholder name="Profile" />} />
         <Route path="/orders/:id" element={<OrderDetailPage />} />
       </Route>
@@ -86,7 +86,7 @@ const AppRoutes = () => (
         <Route path="/supplier/products" element={<SupplierProductsPage />} />
         <Route path="/supplier/products/new" element={<SupplierProductFormPage />} />
         <Route path="/supplier/products/:id/edit" element={<SupplierProductFormPage />} />
-        <Route path="/supplier/orders" element={<PagePlaceholder name="Incoming Orders" />} />
+        <Route path="/supplier/orders" element={<SupplierIncomingOrdersPage />} />
       </Route>
     </Route>
 
