@@ -4,7 +4,7 @@ import ApiError from '../utils/ApiError.js';
 import asyncHandler from '../utils/asyncHandler.js';
 
 export const listProducts = asyncHandler(async (req, res) => {
-  const { category, search, minPrice, maxPrice, color, page = 1, limit = 20 } = req.query;
+  const { category, search, minPrice, maxPrice, color, supplierId, page = 1, limit = 20 } = req.query;
 
   const filter = {};
   if (category) filter.category = category;
@@ -14,6 +14,15 @@ export const listProducts = asyncHandler(async (req, res) => {
     filter.price = {};
     if (minPrice) filter.price.$gte = Number(minPrice);
     if (maxPrice) filter.price.$lte = Number(maxPrice);
+  }
+  // Optional — lets a supplier fetch just their own catalog (e.g. "My
+  // Products"). Omitted entirely means unfiltered by supplier, exactly as
+  // before, so the public marketplace listing is untouched.
+  if (supplierId) {
+    if (!mongoose.isValidObjectId(supplierId)) {
+      throw new ApiError(400, 'Invalid supplier id.', 'VALIDATION_ERROR');
+    }
+    filter.supplierId = supplierId;
   }
 
   const pageNum = Math.max(1, parseInt(page, 10) || 1);

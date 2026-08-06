@@ -19,12 +19,20 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden bg-gradient-to-b from-background via-[#E3D0BB] to-background">
       <WeavePattern
         color="#6B4F3B"
         cell={22}
-        opacity={0.05}
+        opacity={0.08}
         className="pointer-events-none absolute inset-0"
+      />
+
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(circle at 80% 20%, rgba(176,137,104,0.16), transparent 35%), radial-gradient(circle at 20% 80%, rgba(107,78,61,0.08), transparent 40%)',
+        }}
       />
 
       <div className="relative mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-28">

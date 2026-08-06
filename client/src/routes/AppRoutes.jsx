@@ -19,12 +19,16 @@ import CartPage from '../pages/CartPage';
 import CheckoutPage from '../pages/CheckoutPage';
 import OrdersListPage from '../pages/OrdersListPage';
 import OrderDetailPage from '../pages/OrderDetailPage';
+import SupplierDashboardPage from '../pages/SupplierDashboardPage';
+import SupplierProductsPage from '../pages/SupplierProductsPage';
+import SupplierProductFormPage from '../pages/SupplierProductFormPage';
 
 // Phase 2 replaced the Home and Marketplace placeholders with the real
-// pages; Phase 4 replaces Login/Register. This pass replaces the buyer
+// pages; Phase 4 replaces Login/Register; Phase 5 replaced the buyer
 // shopping flow (Product Detail, Cart, Checkout, My Orders, Order Detail).
+// Phase 6 replaces the supplier Dashboard and My Products (CRUD).
 // Everything else still uses PagePlaceholder — onboarding, profile, and
-// the supplier flow come in later phases.
+// Incoming Orders come in later phases.
 const AppRoutes = () => (
   <Routes>
     <Route element={<PublicLayout />}>
@@ -78,8 +82,10 @@ const AppRoutes = () => (
     {/* Supplier-only area */}
     <Route element={<SupplierRoute />}>
       <Route element={<SupplierLayout />}>
-        <Route path="/supplier/dashboard" element={<PagePlaceholder name="Supplier Dashboard" />} />
-        <Route path="/supplier/products" element={<PagePlaceholder name="My Products" />} />
+        <Route path="/supplier/dashboard" element={<SupplierDashboardPage />} />
+        <Route path="/supplier/products" element={<SupplierProductsPage />} />
+        <Route path="/supplier/products/new" element={<SupplierProductFormPage />} />
+        <Route path="/supplier/products/:id/edit" element={<SupplierProductFormPage />} />
         <Route path="/supplier/orders" element={<PagePlaceholder name="Incoming Orders" />} />
       </Route>
     </Route>

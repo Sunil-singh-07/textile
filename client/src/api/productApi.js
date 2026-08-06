@@ -2,9 +2,11 @@ import axiosClient from './axiosClient';
 
 // Maps 1:1 to server/routes/productRoutes.js.
 export const productApi = {
-  // GET /products?category&search&minPrice&maxPrice&color&page&limit
+  // GET /products?category&search&minPrice&maxPrice&color&supplierId&page&limit
   // -> { products, total, page }  (no totalPages/limit echoed back — the
   // caller must compute pages itself from `total` and the `limit` it sent).
+  // `supplierId` is optional and scopes results to one supplier's catalog
+  // (used by the "My Products" page) — omit it for the public marketplace.
   list: (params = {}) => axiosClient.get('/products', { params }).then((res) => res.data),
 
   // -> { product }
