@@ -8,7 +8,12 @@ import authRoutes from './routes/authRoutes.js';
 import productRoutes from './routes/productRoutes.js';
 import cartRoutes from './routes/cartRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
+import onboardingRoutes from './routes/onboardingRoutes.js';
+import dashboardRoutes from './routes/dashboardRoutes.js';
+import supplierRoutes from './routes/supplierRoutes.js';
+import aiRoutes from './routes/aiRoutes.js';
 const app = express();
+
 
 app.use(
   cors({
@@ -26,6 +31,10 @@ app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/orders', orderRoutes);
+app.use('/api/onboarding', onboardingRoutes);
+app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/suppliers', supplierRoutes);
+app.use('/api/ai', aiRoutes);
 // Further routers (products, cart, orders, dashboard, suppliers, ai) plug in
 // here in the same pattern as we build them out.
 

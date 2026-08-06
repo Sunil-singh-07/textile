@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-ink font-sans;
+    /* A near-invisible paper grain — reinforces "woven material" over
+       "flat SaaS gradient" without ever reading as decoration. */
+    background-image: theme('backgroundImage.grain');
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display text-ink;
+  }
+
+  ::selection {
+    background-color: theme('colors.accent.300');
+    color: theme('colors.ink');
+  }
+
+  /* Warm, on-brand focus ring instead of the default blue outline. */
+  :focus-visible {
+    outline: 2px solid theme('colors.accent.500');
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

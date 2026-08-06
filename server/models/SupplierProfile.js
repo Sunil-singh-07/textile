@@ -12,9 +12,15 @@ const supplierProfileSchema = new mongoose.Schema(
     businessType: { type: String, default: '' },
     contactInfo: {
       phone: { type: String, default: '' },
-      contactEmail: { type: String, default: '' },
+      email: { type: String, default: '' },
     },
-    address: { type: String, default: '' },
+    address: {
+      street: { type: String, default: '' },
+      city: { type: String, default: '' },
+      state: { type: String, default: '' },
+      country: { type: String, default: '' },
+      postalCode: { type: String, default: '' },
+    },
     operatingHours: { type: String, default: '' },
     categories: { type: [String], default: [] },
     fabricTypes: { type: [String], default: [] },
