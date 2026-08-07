@@ -25,6 +25,7 @@ import SupplierProductFormPage from '../pages/SupplierProductFormPage';
 import SupplierIncomingOrdersPage from '../pages/SupplierIncomingOrdersPage';
 import BuyerOnboardingPage from '../pages/BuyerOnboardingPage';
 import SupplierOnboardingPage from '../pages/SupplierOnboardingPage';
+import BuyerDashboardPage from '../pages/BuyerDashboardPage';
 
 // Phase 2 replaced the Home and Marketplace placeholders with the real
 // pages; Phase 4 replaces Login/Register; Phase 5 replaced the buyer
@@ -73,9 +74,9 @@ const AppRoutes = () => (
 
     {/* Buyer-only area */}
     <Route element={<BuyerRoute />}>
-      <Route element={<BuyerLayout />}>
-        <Route path="/buyer/dashboard" element={<PagePlaceholder name="Buyer Dashboard" />} />
-        <Route path="/orders" element={<OrdersListPage />} />
+      <Route path="/buyer" element={<BuyerLayout />}>
+        <Route path="dashboard" element={<BuyerDashboardPage />} />
+        <Route path="orders" element={<OrdersListPage />} />
       </Route>
     </Route>
 
