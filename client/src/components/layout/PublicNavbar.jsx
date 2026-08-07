@@ -23,15 +23,25 @@ const PublicNavbar = () => {
         <Logo />
 
         <div className="hidden items-center gap-8 md:flex">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.label}
-              to={link.to}
-              className="text-sm font-medium text-ink/80 transition-colors hover:text-primary"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {NAV_LINKS.map((link) =>
+              link.to.startsWith('/#') ? (
+                <a
+                  key={link.label}
+                  href={link.to}
+                  className="text-sm font-medium text-ink/80 transition-colors hover:text-primary"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.label}
+                  to={link.to}
+                  className="text-sm font-medium text-ink/80 transition-colors hover:text-primary"
+                >
+                  {link.label}
+                </Link>
+              )
+           )}
         </div>
 
         <div className="hidden items-center gap-3 md:flex">

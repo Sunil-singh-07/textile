@@ -13,6 +13,7 @@ export const FEATURED_PRODUCTS = [
     stock: 4200,
     status: 'available',
     supplierName: 'Anandi Textile Mills',
+    images: ['/images/cotton.jpg'],
   },
   {
     _id: 'mock-2',
@@ -24,6 +25,7 @@ export const FEATURED_PRODUCTS = [
     stock: 1800,
     status: 'available',
     supplierName: 'Coastal Weaves Co.',
+    images: ['/images/linen.jpg'],
   },
   {
     _id: 'mock-3',
@@ -35,6 +37,7 @@ export const FEATURED_PRODUCTS = [
     stock: 0,
     status: 'out_of_stock',
     supplierName: 'Himalayan Fibre House',
+    images: ['/images/wool.jpg'],
   },
   {
     _id: 'mock-4',
@@ -46,6 +49,7 @@ export const FEATURED_PRODUCTS = [
     stock: 6100,
     status: 'available',
     supplierName: 'Indigo Mills Ltd.',
+    images: ['/images/denim.jpg'],
   },
   {
     _id: 'mock-5',
@@ -57,6 +61,7 @@ export const FEATURED_PRODUCTS = [
     stock: 950,
     status: 'available',
     supplierName: 'Varanasi Silk Exports',
+    images: ['/images/silk.jpg'],
   },
   {
     _id: 'mock-6',
@@ -68,6 +73,7 @@ export const FEATURED_PRODUCTS = [
     stock: 3400,
     status: 'available',
     supplierName: 'GreenLoom Fabrics',
+    images: ['/images/canvas.jpg'],
   },
 ];
 

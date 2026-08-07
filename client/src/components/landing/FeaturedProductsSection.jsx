@@ -10,7 +10,7 @@ const FeaturedProductsSection = () => (
   <SectionContainer
     eyebrow="Fresh off the loom"
     title="Featured fabrics this week"
-    description="A sample of what's live on the marketplace right now — placeholder listings shown here."
+    description="Explore premium fabrics sourced from verified textile suppliers across India."
   >
     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {FEATURED_PRODUCTS.map((product, i) => (

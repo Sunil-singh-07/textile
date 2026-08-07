@@ -22,7 +22,7 @@ const productData = [
     specs: { gsm: 120, width: '58"', composition: '100% Cotton' },
     price: 189,
     stock: 420,
-    images: ['https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&q=80'],
+    images: ["/images/cotton.jpg"],
   },
   {
     name: 'Heavyweight Cotton Twill',
@@ -33,7 +33,7 @@ const productData = [
     specs: { gsm: 260, width: '60"', composition: '100% Cotton' },
     price: 245,
     stock: 310,
-    images: ['https://images.unsplash.com/photo-1604176424472-9d7f8a0e15d3?w=800&q=80'],
+    images: ["/images/cotton.jpg"],
   },
   {
     name: 'GOTS Organic Cotton',
@@ -44,7 +44,7 @@ const productData = [
     specs: { gsm: 160, width: '56"', composition: '100% Organic Cotton' },
     price: 265,
     stock: 280,
-    images: ['https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&q=80'],
+    images: ["/images/cotton.jpg"],
   },
   {
     name: 'European Flax Linen',
@@ -55,7 +55,7 @@ const productData = [
     specs: { gsm: 200, width: '54"', composition: '100% Linen' },
     price: 520,
     stock: 190,
-    images: ['https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?w=800&q=80'],
+    images: ["/images/linen.jpg"],
   },
   {
     name: 'Cotton-Linen Blend',
@@ -66,7 +66,7 @@ const productData = [
     specs: { gsm: 210, width: '54"', composition: '70% Linen / 30% Cotton' },
     price: 398,
     stock: 260,
-    images: ['https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80'],
+    images: ["/images/linen.jpg"],
   },
   {
     name: 'Soft Rayon Challis',
@@ -77,7 +77,7 @@ const productData = [
     specs: { gsm: 110, width: '56"', composition: '100% Rayon' },
     price: 175,
     stock: 350,
-    images: ['https://images.unsplash.com/photo-1620799139507-2a76f79a2f4d?w=800&q=80'],
+    images: ["/images/rayon.jpg"],
   },
   {
     name: 'Viscose Twill',
@@ -88,7 +88,7 @@ const productData = [
     specs: { gsm: 150, width: '58"', composition: '100% Viscose' },
     price: 210,
     stock: 300,
-    images: ['https://images.unsplash.com/photo-1619532550766-12c525330e57?w=800&q=80'],
+    images: ["/images/viscos.jpg"],
   },
   {
     name: 'Raw Selvedge Denim',
@@ -99,7 +99,7 @@ const productData = [
     specs: { gsm: 420, width: '32"', composition: '100% Cotton' },
     price: 610,
     stock: 150,
-    images: ['https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80'],
+    images: ["/images/denim.jpg"],
   },
   {
     name: 'Stretch Denim',
@@ -110,7 +110,7 @@ const productData = [
     specs: { gsm: 380, width: '58"', composition: '98% Cotton / 2% Elastane' },
     price: 385,
     stock: 275,
-    images: ['https://images.unsplash.com/photo-1604176354204-9268737828e4?w=800&q=80'],
+    images: ["/images/denim.jpg"],
   },
   {
     name: 'Yarn-Dyed Chambray',
@@ -121,7 +121,7 @@ const productData = [
     specs: { gsm: 135, width: '56"', composition: '100% Cotton' },
     price: 220,
     stock: 240,
-    images: ['https://images.unsplash.com/photo-1614251055880-ee96e4803393?w=800&q=80'],
+    images: ['/images/chambray.jpg'],
   },
   {
     name: 'Cotton Canvas',
@@ -132,7 +132,7 @@ const productData = [
     specs: { gsm: 340, width: '60"', composition: '100% Cotton' },
     price: 298,
     stock: 220,
-    images: ['https://images.unsplash.com/photo-1618424181497-157f25b6ddd5?w=800&q=80'],
+    images: ["/images/cotton.jpg"],
   },
   {
     name: '12oz Duck Canvas',
@@ -143,7 +143,7 @@ const productData = [
     specs: { gsm: 400, width: '60"', composition: '100% Cotton' },
     price: 340,
     stock: 180,
-    images: ['https://images.unsplash.com/photo-1604176354204-9268737828e4?w=800&q=80'],
+    images: ["/images/canvas.jpg"],
   },
   {
     name: 'Polyester Satin',
@@ -165,7 +165,7 @@ const productData = [
     specs: { gsm: 90, width: '44"', composition: '100% Mulberry Silk' },
     price: 1180,
     stock: 95,
-    images: ['https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=800&q=80'],
+    images: ["/images/silk.jpg"],
   },
   {
     name: 'Sheer Chiffon',
@@ -176,7 +176,7 @@ const productData = [
     specs: { gsm: 60, width: '58"', composition: '100% Polyester' },
     price: 145,
     stock: 260,
-    images: ['https://images.unsplash.com/photo-1618354691792-d1d42acfd860?w=800&q=80'],
+    images: ["/images/chiffon.jpg"],
   },
   {
     name: 'Georgette Crepe',
@@ -187,7 +187,7 @@ const productData = [
     specs: { gsm: 75, width: '44"', composition: '100% Polyester' },
     price: 160,
     stock: 240,
-    images: ['https://images.unsplash.com/photo-1620799139834-6b8f844fbe61?w=800&q=80'],
+    images: ['/images/crepe.jpg'],
   },
   {
     name: 'Crisp Organza',
@@ -198,7 +198,7 @@ const productData = [
     specs: { gsm: 50, width: '44"', composition: '100% Silk' },
     price: 420,
     stock: 130,
-    images: ['https://images.unsplash.com/photo-1594736797933-d0f06ba69f41?w=800&q=80'],
+    images: ['/images/organza.jpg'],
   },
   {
     name: 'Crushed Velvet',
@@ -209,7 +209,7 @@ const productData = [
     specs: { gsm: 310, width: '54"', composition: '92% Polyester / 8% Spandex' },
     price: 450,
     stock: 160,
-    images: ['https://images.unsplash.com/photo-1600166898405-da9535204843?w=800&q=80'],
+    images: ["/images/velvet.jpg"],
   },
   {
     name: 'Cotton Corduroy 8-Wale',
@@ -220,7 +220,7 @@ const productData = [
     specs: { gsm: 320, width: '56"', composition: '100% Cotton' },
     price: 310,
     stock: 200,
-    images: ['https://images.unsplash.com/photo-1620799139903-92c9f588f7f2?w=800&q=80'],
+    images: ["/images/cotton.jpg"],
   },
   {
     name: 'Anti-Pill Fleece',
@@ -231,7 +231,7 @@ const productData = [
     specs: { gsm: 280, width: '60"', composition: '100% Polyester' },
     price: 235,
     stock: 300,
-    images: ['https://images.unsplash.com/photo-1620799139943-13c5f1d5cf7a?w=800&q=80'],
+    images: ['/images/fleece.jpg'],
   },
   {
     name: 'Wool Blend Suiting',
@@ -242,7 +242,7 @@ const productData = [
     specs: { gsm: 260, width: '60"', composition: '70% Wool / 30% Polyester' },
     price: 680,
     stock: 140,
-    images: ['https://images.unsplash.com/photo-1604671801908-6f0c6a092c05?w=800&q=80'],
+    images: ["/images/wool.jpg"],
   },
   {
     name: 'Recycled Polyester Blend',
@@ -253,7 +253,7 @@ const productData = [
     specs: { gsm: 240, width: '58"', composition: '55% Recycled Polyester / 45% Cotton' },
     price: 198,
     stock: 320,
-    images: ['https://images.unsplash.com/photo-1618354691321-51e2f1d5d8d0?w=800&q=80'],
+    images: ['/images/polyester_blend.jpg'],
   },
   {
     name: 'Terry Cotton Toweling',
@@ -264,7 +264,7 @@ const productData = [
     specs: { gsm: 400, width: '58"', composition: '100% Cotton' },
     price: 255,
     stock: 210,
-    images: ['https://images.unsplash.com/photo-1620799140325-6b8f844fbe62?w=800&q=80'],
+    images: ["/images/cotton.jpg"],
   },
   {
     name: '2x1 Rib Knit',
@@ -275,7 +275,7 @@ const productData = [
     specs: { gsm: 220, width: '38"', composition: '95% Cotton / 5% Elastane' },
     price: 230,
     stock: 260,
-    images: ['https://images.unsplash.com/photo-1620799139804-46e9a2d0f3e2?w=800&q=80'],
+    images: ["/images/knit.jpg"],
   },
   {
     name: 'Cotton Jersey Knit',
@@ -286,7 +286,7 @@ const productData = [
     specs: { gsm: 180, width: '60"', composition: '95% Cotton / 5% Elastane' },
     price: 195,
     stock: 400,
-    images: ['https://images.unsplash.com/photo-1618354691329-6132e4fd8ff5?w=800&q=80'],
+    images: ["/images/knit.jpg"],
   },
   {
     name: 'Fine Cotton Muslin',
@@ -297,7 +297,7 @@ const productData = [
     specs: { gsm: 90, width: '58"', composition: '100% Cotton' },
     price: 110,
     stock: 380,
-    images: ['https://images.unsplash.com/photo-1620799139989-88c0f8f1f6f4?w=800&q=80'],
+    images: ["/images/cotton.jpg"],
   },
   {
     name: 'Cotton Lawn',
@@ -308,7 +308,7 @@ const productData = [
     specs: { gsm: 100, width: '56"', composition: '100% Cotton' },
     price: 215,
     stock: 230,
-    images: ['https://images.unsplash.com/photo-1618354691410-8f0c6e91b0b1?w=800&q=80'],
+    images: ["/images/cotton.jpg"],
   },
   {
     name: 'Cotton Seersucker',
@@ -319,7 +319,7 @@ const productData = [
     specs: { gsm: 140, width: '56"', composition: '100% Cotton' },
     price: 240,
     stock: 200,
-    images: ['https://images.unsplash.com/photo-1618354691456-2c93a2b3f6c9?w=800&q=80'],
+    images: ["/images/cotton.jpg"],
   },
   {
     name: 'Polyester Crepe',
@@ -330,7 +330,7 @@ const productData = [
     specs: { gsm: 180, width: '58"', composition: '100% Polyester' },
     price: 205,
     stock: 260,
-    images: ['https://images.unsplash.com/photo-1618354691503-3f9a8f5b6ea6?w=800&q=80'],
+    images: ['/images/polyester_crepe.jpg'],
   },
   {
     name: 'Silk Taffeta',
@@ -341,7 +341,7 @@ const productData = [
     specs: { gsm: 70, width: '44"', composition: '100% Silk' },
     price: 560,
     stock: 110,
-    images: ['https://images.unsplash.com/photo-1618354691550-4d6f4c1c8b3d?w=800&q=80'],
+    images: ["/images/silk.jpg"],
   },
   {
     name: 'Brushed Cotton Flannel',
@@ -352,7 +352,7 @@ const productData = [
     specs: { gsm: 200, width: '56"', composition: '100% Cotton' },
     price: 225,
     stock: 270,
-    images: ['https://images.unsplash.com/photo-1618354691597-6a2c1e0f5d1a?w=800&q=80'],
+    images: ["/images/cotton.jpg"],
   },
 ];
 
