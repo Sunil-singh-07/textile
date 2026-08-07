@@ -27,14 +27,31 @@ const ProductCard = ({ product, className = '' }) => {
         aria-hidden="true"
       />
 
-      <div className="relative h-40 w-full overflow-hidden bg-primary-50">
-        <WeavePattern color="#6B4F3B" cell={14} opacity={0.14} className="absolute inset-0" />
-        {isOutOfStock && (
-          <div className="absolute inset-0 flex items-center justify-center bg-ink/40">
-            <Badge variant="danger">Out of Stock</Badge>
-          </div>
-        )}
-      </div>
+      <div className="relative h-48 w-full overflow-hidden bg-primary-50">
+          {product.images?.length ? (
+            <img
+              src={product.images[0]}
+              alt={name}
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              onError={(e) => {
+                e.currentTarget.style.display = 'none';
+              }}
+            />
+          ) : (
+            <WeavePattern
+              color="#6B4F3B"
+              cell={14}
+              opacity={0.14}
+              className="absolute inset-0"
+            />
+          )}
+
+          {isOutOfStock && (
+            <div className="absolute inset-0 flex items-center justify-center bg-ink/40">
+              <Badge variant="danger">Out of Stock</Badge>
+            </div>
+          )}
+    </div>
 
       <div className="p-4">
         <p className="mb-1 font-mono text-[11px] uppercase tracking-widest text-accent-600">
